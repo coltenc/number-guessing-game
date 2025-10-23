@@ -1,17 +1,19 @@
-﻿    //randomizes the numbers.
+﻿
+    string p = "no";
+do{
+    //randomizes the numbers.
     Random random = new Random();
     int a = random.Next(1, 10);
     int b = random.Next(1, 50);
     int c = random.Next(1, 100);
+
     //makes the variables so they can be used.
     int t = 0;
     int x = 0;
     int y = 0;
     int z = 0;
-string p = "no";
+
 //difficulty selector.
-do
-{
     Console.Write("Hello please select the difficulty you wish to play on: easy, medium, hard");
     Console.WriteLine();
     string difficulty = Console.ReadLine() + "";
@@ -25,6 +27,7 @@ do
             {
                 Console.WriteLine("Pick a number 1-10");
                 x = Convert.ToInt32(Console.ReadLine());
+                
                 //checks to see if the number is right and it is isnt right it will check if it is greater than or less than the number.
                 if (a == x)
                 {
@@ -39,6 +42,7 @@ do
                 {
                     //adds to there attempts when playing the game when they get it wrong.
                     t++;
+
                     if (a >= x)
                     {
                         Console.WriteLine("Sorry your a bit short! try again");
@@ -57,6 +61,7 @@ do
             break;
 
         case "medium":
+
             while (b != y)
             {
                 Console.WriteLine("Pick a number 1-10");
@@ -72,6 +77,7 @@ do
                 else
                 {
                     t++;
+
                     if (b >= y)
                     {
                         Console.WriteLine("Sorry your a bit short! try again");
@@ -94,6 +100,7 @@ do
             {
                 Console.WriteLine("Pick a number 1-10");
                 z = Convert.ToInt32(Console.ReadLine());
+
                 if (c == z)
                 {
                     Console.WriteLine("Congrates you picked the right number!!!!!!!!!!1");
@@ -105,6 +112,7 @@ do
                 else
                 {
                     t++;
+
                     if (c >= z)
                     {
                         Console.WriteLine("Sorry your a bit short! try again");
@@ -121,6 +129,7 @@ do
                 }
             }
             break;
+
         //makes it so they have to to select a difficulty.
         default:
             Console.WriteLine("I need you to pick a difficulty!!");
